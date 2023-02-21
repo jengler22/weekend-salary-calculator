@@ -12,13 +12,14 @@
     
         <h3>Add Employee</h3>
 
-        <form id="inputForm" onsubmit="submitInfo(event)" >
+        <form id="newForm" onsubmit="submitForm(event)" >
             First Name: <input id="firstName" class="inputForm" type="text" required />
             Last Name: <input id="lastName" class="inputForm" type="text" required />
             ID Number: <input id="idNumber" class="inputForm" type="number" required /> 
             Job Title: <input id="jobTitle" class="inputForm" type="text" required />
-            Annual Salary: <input id=" annualSalary" class="inputForm" type="number" required />
+            Annual Salary: <input id="annualSalary" class="inputForm" type="number" required />
             <input type="submit" />
+
         </form>
      
     
@@ -35,7 +36,10 @@
                     <th> ID Number</th>
                     <th>Job Title</th>
                     <th>Annaul Salary</th>
-                    <th>Remove</th>
+                    <th>Delete Employee</th>
+                    
+
+        
                     
                 </tr>
             

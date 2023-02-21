@@ -1,24 +1,24 @@
 console.log("hello world");
 
-let monthlyTotal = 0;
+let monthlyTotalPayroll = 0;
 
-function submitInfo(event) {
+function submitForm(event) {
     event.preventDefault();
-    console.log(submitInfo);
+    console.log(submitForm);
   // inputs
     let firstName = document.querySelector("#firstName").value;
     let lastName =document.querySelector("#lastName").value;
     let idNumber = document.querySelector("#idNumber").value;
     let jobTitle = document.querySelector("#jobTitle").value;
     let annualSalary = document.querySelector("#annualSalary").value;
-    let inputForm = document.querySelector("#inputForm").value;
+    let newForm = document.querySelector("#newForm").value;
     newPerson(
         firstName,
         lastName,
         idNumber,
         jobTitle,
         annualSalary,
-        inputForm
+        newForm
     );
     }    
 
@@ -40,7 +40,7 @@ function submitInfo(event) {
           <td>${person.lastName}</td>
           <td>${person.idNumber}</td>
           <td>${person.jobTitle}</td>
-          <td> class="salary">${person.annualSalary}</td>
+          <td>${person.annualSalary}</td>
           <td>
               <button onClick = "removePerson(this,${person.annualSalary})"<Remove</button>
           <td>  
@@ -58,11 +58,11 @@ function submitInfo(event) {
     
     function updateMonthlyTotalPayroll() {
         let updateMonthlyTotalPayroll = document.querySelector("#monthlyTotalPayroll");
-        updateMonthlyTotalPayroll.innerHTML = monthlyTotalPayroll.tofixed(2);
+        updateMonthlyTotalPayroll.innerHTML = monthlyTotalPayroll.toFixed(2);
     }
 
 // remove data from table
-function deletePerson(button, annualSalary){
+function removePerson(button, annualSalary){
     monthlyTotalPayroll -= annualSalary / 12;
     updateMonthlyTotalPayroll();
     button.parentElement.parentElement.remove();
