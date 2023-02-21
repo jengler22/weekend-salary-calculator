@@ -33,12 +33,39 @@ function submitInfo(event) {
         addPerson(person);
     }
     function addPerson(person) {
-        
+        let tableBody = document.querySelector("#tableBody");
+        tableBody.innerHTML += `
+        <tr>
+          <td>${person.firstName}</td>
+          <td>${person.lastName}</td>
+          <td>${person.idNumber}</td>
+          <td>${person.jobTitle}</td>
+          <td> class="salary">${person.annualSalary}</td>
+          <td>
+              <button onClick = "removePerson(this,${person.annualSalary})"<Remove</button>
+          <td>  
+          <tr> 
+       `;
+       sumSalary(person.annualSalary);
+    }
+
+    function sumSalary (salary) {
+        let monthlySalary = salary / 12;
+        monthlyTotalPayroll += monthlySalary;
+
+        updateMonthlyTotalPayroll();
     }
     
+    function updateMonthlyTotalPayroll() {
+        let updateMonthlyTotalPayroll = document.querySelector("#monthlyTotalPayroll");
+        updateMonthlyTotalPayroll.innerHTML = monthlyTotalPayroll.tofixed(2);
+    }
 
 // remove data from table
-function removeData(event) {
-    event.target.closest('tr').remove();
+function deletePerson(button, annualSalary){
+    monthlyTotalPayroll -= annualSalary / 12;
+    updateMonthlyTotalPayroll();
+    button.parentElement.parentElement.remove();
 }
+    
 
