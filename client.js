@@ -20,6 +20,7 @@ function submitForm(event) {
         annualSalary,
         newForm
     );
+    
     }    
 
     function newPerson(firstName, lastName, idNumber, jobTitle, annualSalary) {
