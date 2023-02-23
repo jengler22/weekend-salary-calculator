@@ -23,7 +23,7 @@ function submitForm(event) {
     );
     
     }    
-
+// Function to add new employee
     function newPerson(firstName, lastName, idNumber, jobTitle, annualSalary) {
         let person = {
             firstName,
@@ -34,6 +34,7 @@ function submitForm(event) {
         };
         addPerson(person);
     }
+    //function to add new employee cont.
     function addPerson(person) {
         let tableBody = document.querySelector("#tableBody");
         tableBody.innerHTML += `
@@ -60,7 +61,7 @@ function submitForm(event) {
 
         updateMonthlyTotalPayroll();
     }
-    
+    // change color to red if payroll is too high
     function updateMonthlyTotalPayroll() {
         let updateMonthlyTotalPayroll = document.querySelector("#monthlyTotalPayroll");
         updateMonthlyTotalPayroll.innerHTML = monthlyTotalPayroll.toFixed(2);
