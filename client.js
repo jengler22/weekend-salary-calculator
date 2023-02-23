@@ -1,6 +1,7 @@
 console.log("hello world");
 
 let monthlyTotalPayroll = 0;
+let newForm = 0;
 
 function submitForm(event) {
     event.preventDefault();
@@ -43,10 +44,13 @@ function submitForm(event) {
           <td>${person.jobTitle}</td>
           <td>${person.annualSalary}</td>
           <td>
-              <button onClick = "removePerson(this,${person.annualSalary})"<Remove</button>
+              <button onClick ="removePerson(this,${person.annualSalary})">Remove</button>
           <td>  
           <tr> 
-       `;
+          
+        `;
+    
+
        sumSalary(person.annualSalary);
     }
 
@@ -60,13 +64,24 @@ function submitForm(event) {
     function updateMonthlyTotalPayroll() {
         let updateMonthlyTotalPayroll = document.querySelector("#monthlyTotalPayroll");
         updateMonthlyTotalPayroll.innerHTML = monthlyTotalPayroll.toFixed(2);
+        if(monthlyTotalPayroll > 20000){
+
+        updateMonthlyTotalPayroll.style.backgroundColor = 'red';
+        };
     }
 
 // remove data from table
 function removePerson(button, annualSalary){
     monthlyTotalPayroll -= annualSalary / 12;
     updateMonthlyTotalPayroll();
+    
     button.parentElement.parentElement.remove();
 }
+
+
+    //payrollDiv.style.backgroundColor = 'red';
+
+
+
     
 
