@@ -1,9 +1,22 @@
 # Project Name
+Salary Calculator
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
 
 ## Description
+Salary calculator to keep company payroll within the budget.
 
-Your project description goes here. What problem did you solve? How did you solve it?
+Enter employee Name, ID number, Job title and annual salary.
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+Company has a maximum payroll of $20,000 per month. 
+
+If monthly salary exceeds listed maximum amount, the total dollar amount at the bottom of the page will turn red.
+
+You have to option to delete employees to reduce monthly total.
+
+## Preview
+![screenshot](./public/calc.png)
+
+## Made with
+javascript
+HTML5
+CSS
