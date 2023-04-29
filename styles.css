@@ -1,7 +1,17 @@
 #newForm {
     display: grid;
     background-color: antiquewhite;
-    text-align: center;
+    text-align: left;
     
 }
+
+h1 {
+    color: solid black;
+    text-align: center;
+    border: 5px solid black;
+    
+  }
+
+ 
+  
 
